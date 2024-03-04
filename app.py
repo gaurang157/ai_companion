@@ -24,16 +24,16 @@ model = genai.GenerativeModel('gemini-1.0-pro-001')                          # T
 # Allow user to select the subject
 selected_subject = st.sidebar.selectbox("Select Subject:", ["Social Studies", "Economics", "English", "Science", "Mathematics"])
 
-# temperature=st.sidebar.number_input("temperature", value=0.9, step=0.1, placeholder="Type a temperature...")
-# top_p=st.sidebar.number_input("top_p", value=1.0, step=0.1, placeholder="Type a top_p...")
-# top_k=st.sidebar.number_input("top_k", value=20, placeholder="Type a top_k...")
-# max_output_tokens=st.sidebar.number_input("max_output_tokens", value=400000, placeholder="max_output_tokens...")
-# generation_config = genai.GenerationConfig(
-# 	max_output_tokens=max_output_tokens,
-# 	temperature=temperature,
-# 	top_p=top_p,
-# 	top_k=top_k
-# )
+ temperature=st.sidebar.number_input("temperature", value=0.9, step=0.1, placeholder="Type a temperature...")
+ top_p=st.sidebar.number_input("top_p", value=1.0, step=0.1, placeholder="Type a top_p...")
+ top_k=st.sidebar.number_input("top_k", value=20, placeholder="Type a top_k...")
+ max_output_tokens=st.sidebar.number_input("max_output_tokens", value=400000, placeholder="max_output_tokens...")
+ generation_config = genai.GenerationConfig(
+ 	max_output_tokens=max_output_tokens,
+ 	temperature=temperature,
+ 	top_p=top_p,
+ 	top_k=top_k
+ )
 generation_config = genai.GenerationConfig(
 	max_output_tokens=400000,
 	temperature=0.9,
